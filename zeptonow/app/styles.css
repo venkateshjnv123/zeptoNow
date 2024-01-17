@@ -1,0 +1,10 @@
+.chips-container{
+    border-bottom: 1px solid black;
+    background : '#fff'
+
+}
+
+.chip-input {
+    border : none;
+    outline : none;
+}
