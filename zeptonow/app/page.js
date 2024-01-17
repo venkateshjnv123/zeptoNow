@@ -50,6 +50,7 @@ export default function Home() {
     return () => {
       document.removeEventListener("keydown", handleBackspace);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedNames]);
 
   const handleInputChangePosition = () => {
@@ -90,6 +91,7 @@ export default function Home() {
       <input
         type="text"
         value={inputValue}
+        onClick={handleInputClick}
         onChange={handleInputChange}
         ref={inputRef}
         placeholder="Enter a name"
@@ -97,7 +99,7 @@ export default function Home() {
       />
        </div>
       {
-        document.activeElement === inputRef.current && (
+        show && (
           <div className="bg-white border border-gray-300 rounded mt-1"
           style={{ top: cursorPosition.top, left: cursorPosition.left, position: "absolute", zIndex: 1 }}>
           {filteredNames.map((person, index) => (

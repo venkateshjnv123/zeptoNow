@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "zeptonow-e69f",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
